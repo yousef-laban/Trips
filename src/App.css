@@ -13,6 +13,14 @@
   }
 }
 
+body{
+
+  background-image: url("https://cdn.hipwallpaper.com/i/49/46/3qF2Ra.jpg%22");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

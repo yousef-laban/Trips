@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+//component
+import Home from "./components/Home";
+import TripsList from "./components/TripsList";
+import TripDetails from "./components/TripDetails";
+import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
+
+//styleing
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "./styles";
+
+// import { useState } from "react";
+import trips from "./trips";
+import { Route, Switch } from "react-router";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route path="/trips/:tripSlug">
+          <TripDetails trips={trips} />
+        </Route>
+
+        <Route path="/not-found">
+          <NotFound />
+        </Route>
+
+        <Route path="/trips">
+          <TripsList trips={trips} />;
+        </Route>
+      </Switch>
+    </ThemeProvider>
   );
 }
 
