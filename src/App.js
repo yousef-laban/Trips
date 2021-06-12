@@ -23,8 +23,12 @@ function App() {
           <Home />
         </Route>
 
-        <Route path="/trips/:tripSlug">
+        <Route path="/trips/details/:tripSlug">
           <TripDetails trips={trips} />
+        </Route>
+
+        <Route path="/trips/:tripDiff">
+          <TripsList trips={trips} />;
         </Route>
 
         <Route path="/not-found">

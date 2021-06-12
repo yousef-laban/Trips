@@ -1,16 +1,15 @@
 //styling
 import { ProductImage, ItemDetail, ProductsStyle } from "../styles";
 
-import { Redirect, useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import TripItem from "./TripItem";
-//data
-// import products from "../products";
 
 const TripDetails = (props) => {
   let tripSlug = useParams().tripSlug;
 
   const trip = props.trips.find((trip) => trip.slug === tripSlug);
+  console.log(trip);
   if (!trip) return <Redirect to="/not-found" />;
 
   const suj = props.trips

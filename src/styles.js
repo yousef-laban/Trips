@@ -47,12 +47,12 @@ export const ProductsStyle = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
   margin-bottom: 100px;
 `;
 
 export const Item = styled.div`
   text-align: center;
+  margin-bottom: 20px;
 
   :hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -86,11 +86,12 @@ export const ItemDetail = styled.div`
 `;
 
 export const ProductImage = styled.img`
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   border: 5px solid;
   border-color: ${(props) => props.theme.thirdColor};
   border-radius: 4%;
+  margin: 10px;
 `;
 
 export const SearchBarStyled = styled.input`
@@ -98,7 +99,6 @@ export const SearchBarStyled = styled.input`
   display: block;
   width: 40%;
 `;
-
 export const StyledButton = styled.button`
   box-shadow: inset 0px 1px 3px 0px #91b8b3;
   background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);

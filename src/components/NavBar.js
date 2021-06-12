@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { NavB, Logo, LinkItem } from "../styles";
 
 const NavBar = (props) => {
@@ -14,7 +13,7 @@ const NavBar = (props) => {
         <p>Laban and Jalajel Trips</p>
       </div>
       <div>
-        <LinkItem to="/trips">Trips</LinkItem>
+        <LinkItem to="/trips/">Trips</LinkItem>
       </div>
     </NavB>
   );
